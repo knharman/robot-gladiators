@@ -79,19 +79,19 @@ var startGame = function () {
                 if (storeConfirm) {
                     shop();
                 }
-
-            }
-            else {
-                window.alert("You have lost your robot in battle! Game Over!");
-                break;
             }
         }
-        endGame();
+        else {
+            window.alert("You have lost your robot in battle! Game Over!");
+            break;
+        }
     }
+    endGame();
 };
 
 // function to end the entire game
 var endGame = function () {
+    window.alert("The game has now ended. Let's see how you did!");
     // if player is still alive, player wins!
     if (playerInfo.health > 0) {
         window.alert("Great job, you've survived the game! You now have a score of " + playerInfo.money + ".");
